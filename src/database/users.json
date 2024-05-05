@@ -1,0 +1,23 @@
+[
+  {
+    "id": "a08a3147-e29b-4609-b0ae-7d2ec135cb9a",
+    "username": "kae",
+    "email": "kae@gmail.com",
+    "password": "1234",
+    "createdAt": "2024-05-05T10:52:55.878Z"
+  },
+  {
+    "id": "a504f42a-de54-483b-b28b-5cd300b1f38d",
+    "username": "elina",
+    "email": "elina@gmail.com",
+    "password": "qqqq",
+    "createdAt": "2024-05-05T10:59:17.294Z"
+  },
+  {
+    "id": "0892819c-f1a7-4151-b6fb-2b1c82ed9bd3",
+    "username": "paul",
+    "email": "paul@gmail.com",
+    "password": "9090",
+    "createdAt": "2024-05-05T11:00:18.925Z"
+  }
+]
