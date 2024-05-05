@@ -38,8 +38,9 @@
     "id": "d25312ad-f13f-4eb6-8126-9ffae6b80abb",
     "username": "nick",
     "email": "nick@gmail.com",
-    "password": "$2b$10$sD4K0UI4yuDeeuOkOm0um.Ne2XkQnMIi6UkLHxw4nPiPbhFz/J6Hm",
-    "createdAt": "2024-05-05T16:22:32.112Z"
+    "password": {},
+    "createdAt": "2024-05-05T16:22:32.112Z",
+    "updatedAt": "2024-05-05T20:13:31.195Z"
   },
   {
     "id": "b9a6b01b-4ab7-4e5a-9eed-e68ce1b36ac0",
@@ -54,5 +55,12 @@
     "email": "john@gmail.com",
     "password": "$2b$10$8TpXKsyxWt2y5SMfevdgSuytiJID5jKWd7x9EeS8QWyI2RErM0kcu",
     "createdAt": "2024-05-05T16:23:52.316Z"
+  },
+  {
+    "id": "32834e32-3d79-4959-957c-5d9634fd656e",
+    "username": "ting",
+    "email": "ting@gmail.com",
+    "password": "$2b$10$uccGiu7dcekLqcPXfIUXB.pVqMVQNWyVUQTykENGSUkdfdnLVGqW6",
+    "createdAt": "2024-05-05T20:14:59.958Z"
   }
 ]
