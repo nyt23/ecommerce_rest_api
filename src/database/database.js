@@ -32,4 +32,8 @@ export function saveData(filename, data) {
     }
 }
 
+
+export function findUserById(users, id) {
+    return users.find(user => user.id === id)
+}
 //module.exports = { readData, saveData }
