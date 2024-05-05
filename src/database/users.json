@@ -21,17 +21,38 @@
     "createdAt": "2024-05-05T11:00:18.925Z"
   },
   {
-    "id": "2e012bc9-ebe6-49c5-9094-64c209978376",
-    "username": "nick",
-    "email": "nick@gmail.com",
-    "password": "n111",
-    "createdAt": "2024-05-05T13:37:35.572Z"
-  },
-  {
     "id": "91bfb4bb-90af-4501-ae44-c6e8ef080779",
     "username": "frank",
     "email": "frank@gmail.com",
     "password": "$2b$10$RFUQBemPBL8TOi85spqFiu4PhrJBGIbstDwyjVGK/uCQ4HNZ9JMOi",
     "createdAt": "2024-05-05T15:05:51.667Z"
+  },
+  {
+    "id": "528c3165-22a3-4f13-a0da-ff9617b5c3de",
+    "username": "alex",
+    "email": "alex@gmail.com",
+    "password": "$2b$10$TVuvsYI1/SMqBPrKxKGm.ur/vn7J6K57335.MpZ9N1Lk/qxQx7fmW",
+    "createdAt": "2024-05-05T16:20:46.602Z"
+  },
+  {
+    "id": "d25312ad-f13f-4eb6-8126-9ffae6b80abb",
+    "username": "nick",
+    "email": "nick@gmail.com",
+    "password": "$2b$10$sD4K0UI4yuDeeuOkOm0um.Ne2XkQnMIi6UkLHxw4nPiPbhFz/J6Hm",
+    "createdAt": "2024-05-05T16:22:32.112Z"
+  },
+  {
+    "id": "b9a6b01b-4ab7-4e5a-9eed-e68ce1b36ac0",
+    "username": "ariana",
+    "email": "ariana@gmail.com",
+    "password": "$2b$10$kD5KKr9T/10CdpBmRrZCa.LB4nXpLYZy2e40/DP0ttFnc1aXByGAS",
+    "createdAt": "2024-05-05T16:23:32.108Z"
+  },
+  {
+    "id": "e70682ea-4697-4b87-ab6f-576e9a117a26",
+    "username": "john",
+    "email": "john@gmail.com",
+    "password": "$2b$10$8TpXKsyxWt2y5SMfevdgSuytiJID5jKWd7x9EeS8QWyI2RErM0kcu",
+    "createdAt": "2024-05-05T16:23:52.316Z"
   }
 ]
