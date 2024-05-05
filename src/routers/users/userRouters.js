@@ -4,11 +4,17 @@ const userRoutes = express.Router();
 import {v4 as uuid} from "uuid";
 // const app = express();
 import fs from 'fs';
-userRoutes.use(express.json());
 import {readData, saveData} from "../../database/database.js";
 import path from "path";
 import registerSchema from "../../schemas/userRegisterSchema.js";
+// import passport from './loginAuthentication.js'
+import passport from "passport";
+userRoutes.use(passport.initialize());
+userRoutes.use(express.json());
 
+
+
+// --------------------------- REGISTRATION ------------------------------
 // create users data
 userRoutes.post('/api/users', (req, res) => {
     //console.log(req.body);
@@ -173,8 +179,29 @@ userRoutes.delete('/api/users/:id', (req, res) => {
         console.error(e);
         res.status(500).send('Internal Server Error');
     }
-})
+});
 
 
+// ------------------------ LOGIN --------------------------
+// userRoutes.post('/api/login', passport.authenticate('basic', {session:'false'}), (req, res) => {
+//     res.status(200).send('Email and password matched, authenticated user!');
+// }, (error, req, res) => {
+//     res.status(401).send('Invalid email or password, unauthenticated user!')
+// });
+
+userRoutes.post('/api/login', (req, res, next) => {
+    passport.authenticate('basic', { session: false }, (err, user, info) => {
+        if (err) {
+            console.error('Authentication error:', err);
+            return res.status(500).send('Internal Server Error');
+        }
+        if (!user) {
+            console.error('Authentication failed:', info.message);
+            return res.status(401).send(info.message || 'Authentication failed');
+        }
+        console.log('Authentication successful!');
+        return res.status(200).send('Email and password matched, authenticated user!');
+    })(req, res, next);
+});
 
 export default userRoutes;
