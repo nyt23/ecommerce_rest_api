@@ -19,5 +19,19 @@
     "email": "paul@gmail.com",
     "password": "9090",
     "createdAt": "2024-05-05T11:00:18.925Z"
+  },
+  {
+    "id": "2e012bc9-ebe6-49c5-9094-64c209978376",
+    "username": "nick",
+    "email": "nick@gmail.com",
+    "password": "n111",
+    "createdAt": "2024-05-05T13:37:35.572Z"
+  },
+  {
+    "id": "91bfb4bb-90af-4501-ae44-c6e8ef080779",
+    "username": "frank",
+    "email": "frank@gmail.com",
+    "password": "$2b$10$RFUQBemPBL8TOi85spqFiu4PhrJBGIbstDwyjVGK/uCQ4HNZ9JMOi",
+    "createdAt": "2024-05-05T15:05:51.667Z"
   }
 ]
