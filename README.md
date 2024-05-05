@@ -1,6 +1,6 @@
 ### **Project Objectives:**
 
-- Build a functioning e-commerce REST API using Express, Node.js, and Postgres
+- Build a functioning e-commerce REST API using Express, Node.js
 - Allow users to register and log in via the API
 - Allow CRUD operations on products
 - Allow CRUD operations on user accounts
