@@ -5,11 +5,20 @@ import express from 'express';
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 import {fileURLToPath} from "url";
+import passport from 'passport';
+import { Strategy } from 'passport-local';
+import { BasicStrategy } from 'passport-http'
+import bcrypt from "bcrypt";
+
 import {v4 as uuid} from "uuid";
 import {findUserById, readData, saveData} from "./database/database.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const publicDirectory = path.join(__dirname, 'public');
+
+
+
+
 
 // Mounting user routes at '/api/users'
 import userRoutes from './routers/users/userRouters.js';
@@ -19,9 +28,54 @@ app.use('/', userRoutes);
 app.use(express.json());
 app.use(express.static(publicDirectory));
 
+// registration HTML page
 app.get('/', (req, res) => {
     res.sendFile(path.join(publicDirectory, 'registration.html'))
 });
+
+
+// login HTML page
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(publicDirectory, 'login.html'))
+})
+
+
+
+
+const usersData = fs.readFileSync('./database/users.json', 'utf-8');
+const users = JSON.parse(usersData);
+
+// using Basic
+passport.use(new BasicStrategy(
+    function (email, password, done) {
+        console.log('Email:', email);
+        console.log('Password:', password);
+
+        const user = users.find(u => u.email === email);
+        console.log('User:', user);
+
+        if (!user) {
+            return done(null, false, { message: 'User not found' });
+        }
+        if (!bcrypt.compareSync(password, user.password)) {
+            return done(null, false, { message: 'Incorrect password' });
+        }
+        return done(null, user) // when success
+    }
+));
+
+
+// Serialize and Deserialize User (required for session handling)
+// serialize all user by id stored in session
+passport.serializeUser(function (user, done) {
+    done(null, user.id);
+});
+// specify one user by id
+passport.deserializeUser(function (id, done) {
+    const user = users.find(u => u.id === id);
+    done(null, user || false);
+});
+
 
 // app.post('/users', (req, res) => {
 //     console.log(req.body);
